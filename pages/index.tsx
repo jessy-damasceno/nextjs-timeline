@@ -1,5 +1,10 @@
 import Box from "@src/components/Box";
 import theme from "@src/theme/theme";
+import styled from "styled-components";
+
+const StyledBox = styled.div`
+  color: purple;
+`;
 
 export default function HomeScreen() {
   return (
@@ -7,9 +12,13 @@ export default function HomeScreen() {
       tag="main"
       styleSheet={{
         fontFamily: theme.typography.fontFamily,
+        backgroundColor: {
+          xs: "red",
+          md: "yellow",
+        },
       }}
     >
-      Oi
+      <StyledBox>Oi</StyledBox>
     </Box>
   );
 }
